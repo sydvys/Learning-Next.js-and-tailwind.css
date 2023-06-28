@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="back">
-          <nav className="w-full fixed top-0 left-0 right-0 z-10">
+          <nav className="w-full z-10">
             <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
               <div>
                 <div className="flex items-center justify-between py-4 md:py-5 px-4 md:block ">
@@ -89,12 +89,15 @@ export default function RootLayout({ children }) {
                 >
                   <ul className="h-screen md:h-auto items-center justify-center md:flex ">
                     <li className="pb-6 text-xl text-white py-2 md:px-6 text-center">
-                      <Link href="#" onClick={() => setNavbar(!navbar)}>
+                      <Link href="/Help" onClick={() => setNavbar(!navbar)}>
                         Help
                       </Link>
                     </li>
                     <li className="pb-6 text-xl text-white py-2 px-6 text-center">
-                      <Link href="#" onClick={() => setNavbar(!navbar)}>
+                      <Link
+                        href="/Dictionaries"
+                        onClick={() => setNavbar(!navbar)}
+                      >
                         Dictionaries
                       </Link>
                     </li>
@@ -176,12 +179,12 @@ export default function RootLayout({ children }) {
                     </li>
 
                     <li className="pb-6 text-xl text-white py-2 px-6 text-center">
-                      <Link href="#" onClick={() => setNavbar(!navbar)}>
+                      <Link href="/Mobile" onClick={() => setNavbar(!navbar)}>
                         Mobile App
                       </Link>
                     </li>
                     <li className="pb-6 text-xl text-white py-2 px-6 text-center">
-                      <Link href="#" onClick={() => setNavbar(!navbar)}>
+                      <Link href="/Contact" onClick={() => setNavbar(!navbar)}>
                         Contact us
                       </Link>
                     </li>
@@ -191,9 +194,9 @@ export default function RootLayout({ children }) {
             </div>
           </nav>
 
-          {children}
+          <div className="">{children}</div>
 
-          <footer className="absolute bottom-0 py-5 px-2 w-full">
+          <footer className="absolute bottom-0 py-5 px-4 w-full">
             <div className="flex justify-between">
               <div className="flex">
                 <div>
