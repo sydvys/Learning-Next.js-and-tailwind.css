@@ -88,12 +88,21 @@ export default function RootLayout({ children }) {
                   }`}
                 >
                   <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                    <li className="pb-6 text-xl text-white py-2 md:px-6 text-center">
+                    <li className="pb-6 text-lg text-white py-2 md:px-6 text-center">
+                      <Link href="/Help" onClick={() => setNavbar(!navbar)}>
+                      <img
+                    className="w-7 h-93"
+                    src="./facebook.svg"
+                    alt="facebook_logo"
+                  />
+                      </Link>
+                    </li>
+                    <li className="pb-6 text-lg text-white py-2 md:px-6 text-center">
                       <Link href="/Help" onClick={() => setNavbar(!navbar)}>
                         Help
                       </Link>
                     </li>
-                    <li className="pb-6 text-xl text-white py-2 px-6 text-center">
+                    <li className="pb-6 text-lg text-white py-2 px-6 text-center">
                       <Link
                         href="/Dictionaries"
                         onClick={() => setNavbar(!navbar)}
@@ -107,7 +116,7 @@ export default function RootLayout({ children }) {
                         className="relative inline-block text-left"
                       >
                         <div>
-                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-xl">
+                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-lg">
                             Project
                             <ChevronDownIcon
                               className="-mr-1 h-5 w-5 text-[#ff5f53]"
@@ -178,12 +187,12 @@ export default function RootLayout({ children }) {
                       </Menu>
                     </li>
 
-                    <li className="pb-6 text-xl text-white py-2 px-6 text-center">
+                    <li className="pb-6 text-lg text-white py-2 px-6 text-center">
                       <Link href="/Mobile" onClick={() => setNavbar(!navbar)}>
                         Mobile App
                       </Link>
                     </li>
-                    <li className="pb-6 text-xl text-white py-2 px-6 text-center">
+                    <li className="pb-6 text-lg text-white py-2 px-6 text-center">
                       <Link href="/Contact" onClick={() => setNavbar(!navbar)}>
                         Contact us
                       </Link>
@@ -199,25 +208,36 @@ export default function RootLayout({ children }) {
           <footer className="absolute bottom-0 py-5 px-4 w-full">
             <div className="flex justify-between">
               <div className="flex">
-                <div>
+                <a
+                  target="_blank"
+                  href="https://play.google.com/store/apps/details?id=org.kirbit.bildilcin"
+                  className="cursor-pointer"
+                >
                   <img
                     className="w-7 h-93"
                     src="./playstore.svg"
                     alt="playstore_logo"
                   />
-                </div>
-                <div className="pl-8">
+                </a>
+
+                <a
+                  target="_blank"
+                  href="https://apps.apple.com/us/app/bildil%C3%A7in/id1346573843?ign-mpt=uo%3D4"
+                  className="pl-8"
+                >
                   <img
                     className="w-5 h-93"
                     src="./apple.svg"
                     alt="apple_logo"
                   />
-                </div>
+                </a>
               </div>
 
               <div className="flex">
                 <span className="text-white px-3 text-sm">by</span>
-                <a href="#">
+                <a 
+                target="_blank" 
+                href="http://kibrit.tech/">
                   <img
                     className="w-18 h-93"
                     src="./kibrit.svg"
