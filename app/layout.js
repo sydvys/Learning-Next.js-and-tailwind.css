@@ -29,11 +29,15 @@ export default function RootLayout({ children }) {
           <nav className="w-full z-10">
             <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
               <div>
-                <div className="flex items-center justify-between py-4 md:py-5 px-4 md:block ">
+                <div className="flex items-center justify-between py-4 md:py-8 md:block">
                   {/* LOGO */}
                   <Link href="/">
                     <div className="text-xs">
-                      <img className="w-20 h-93" src="./logo.svg" alt="logo" />
+                      <img
+                        className="w-20 md:w-32"
+                        src="./logo.svg"
+                        alt="logo"
+                      />
                     </div>
                   </Link>
                   {/* HAMBURGER BUTTON FOR MOBILE */}
@@ -87,22 +91,22 @@ export default function RootLayout({ children }) {
                     navbar ? "p-12 md:p-0 block" : "hidden"
                   }`}
                 >
-                  <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                    <li className="pb-6 text-lg text-white py-2 md:px-6 text-center">
+                  <ul className="h-screen md:h-auto items-center justify-center md:flex py-6">
+                    <li className="pb-6 text-lg text-white py-2 md:px-2 text-center">
                       <Link href="/Help" onClick={() => setNavbar(!navbar)}>
-                      <img
-                    className="w-7 h-93"
-                    src="./facebook.svg"
-                    alt="facebook_logo"
-                  />
+                        <img
+                          className="w-7 h-93"
+                          src="./facebook.svg"
+                          alt="facebook_logo"
+                        />
                       </Link>
                     </li>
-                    <li className="pb-6 text-lg text-white py-2 md:px-6 text-center">
+                    <li className="pb-6 text-lg text-white py-2 md:px-3 text-center">
                       <Link href="/Help" onClick={() => setNavbar(!navbar)}>
                         Help
                       </Link>
                     </li>
-                    <li className="pb-6 text-lg text-white py-2 px-6 text-center">
+                    <li className="pb-6 text-lg text-white py-2 px-3 text-center">
                       <Link
                         href="/Dictionaries"
                         onClick={() => setNavbar(!navbar)}
@@ -110,7 +114,7 @@ export default function RootLayout({ children }) {
                         Dictionaries
                       </Link>
                     </li>
-                    <li className="pb-6 text-xl text-white py-2 px-6 text-center">
+                    <li className="pb-6 text-xl text-white py-2 px-3 text-center">
                       <Menu
                         as="div"
                         className="relative inline-block text-left"
@@ -119,7 +123,7 @@ export default function RootLayout({ children }) {
                           <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-lg">
                             Project
                             <ChevronDownIcon
-                              className="-mr-1 h-5 w-5 text-[#ff5f53]"
+                              className="h-4 text-[#ff5f53] mt-2"
                               aria-hidden="true"
                             />
                           </Menu.Button>
@@ -187,15 +191,77 @@ export default function RootLayout({ children }) {
                       </Menu>
                     </li>
 
-                    <li className="pb-6 text-lg text-white py-2 px-6 text-center">
+                    <li className="pb-6 text-lg text-white py-2 px-3 text-center">
                       <Link href="/Mobile" onClick={() => setNavbar(!navbar)}>
                         Mobile App
                       </Link>
                     </li>
-                    <li className="pb-6 text-lg text-white py-2 px-6 text-center">
+                    <li className="pb-6 text-lg text-white py-2 px-3 text-center">
                       <Link href="/Contact" onClick={() => setNavbar(!navbar)}>
                         Contact us
                       </Link>
+                    </li>
+
+                    <li className="pb-6 text-xl text-white py-2 pl-3 text-center">
+                      <Menu
+                        as="div"
+                        className="relative inline-block text-left"
+                      >
+                        <div>
+                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-lg">
+                            En
+                            <ChevronDownIcon
+                              className="h-4 text-[#ff5f53] mt-2"
+                              aria-hidden="true"
+                            />
+                          </Menu.Button>
+                        </div>
+
+                        <Transition
+                          as={Fragment}
+                          enter="transition ease-out duration-100"
+                          enterFrom="transform opacity-0 scale-95"
+                          enterTo="transform opacity-100 scale-100"
+                          leave="transition ease-in duration-75"
+                          leaveFrom="transform opacity-100 scale-100"
+                          leaveTo="transform opacity-0 scale-95"
+                        >
+                          <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <div className="py-1">
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 text-sm"
+                                    )}
+                                  >
+                                    Ru
+                                  </a>
+                                )}
+                              </Menu.Item>
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 text-sm"
+                                    )}
+                                  >
+                                    Az
+                                  </a>
+                                )}
+                              </Menu.Item>
+                            </div>
+                          </Menu.Items>
+                        </Transition>
+                      </Menu>
                     </li>
                   </ul>
                 </div>
@@ -205,45 +271,59 @@ export default function RootLayout({ children }) {
 
           <div className="">{children}</div>
 
-          <footer className="absolute bottom-0 py-5 px-4 w-full">
+          <footer className="absolute bottom-0 py-5 md:py-10 px-4 md:px-6 w-full">
             <div className="flex justify-between">
               <div className="flex">
                 <a
                   target="_blank"
                   href="https://play.google.com/store/apps/details?id=org.kirbit.bildilcin"
-                  className="cursor-pointer"
+                  className="cursor-pointer flex hover:underline text-white"
                 >
                   <img
                     className="w-7 h-93"
                     src="./playstore.svg"
                     alt="playstore_logo"
                   />
+                  <span className="text-white px-3">
+                    Play Market
+                  </span>
                 </a>
 
                 <a
                   target="_blank"
                   href="https://apps.apple.com/us/app/bildil%C3%A7in/id1346573843?ign-mpt=uo%3D4"
-                  className="pl-8"
+                  className="pl-8 cursor-pointer flex hover:underline text-white"
                 >
-                  <img
-                    className="w-5 h-93"
-                    src="./apple.svg"
-                    alt="apple_logo"
-                  />
+                  <img className="w-5 h-6" src="./apple.svg" alt="apple_logo" />
+                  <span className="text-white px-3">
+                    App Store
+                  </span>
                 </a>
               </div>
 
               <div className="flex">
-                <span className="text-white px-3 text-sm">by</span>
-                <a 
-                target="_blank" 
-                href="http://kibrit.tech/">
+
+                <a target="_blank" className="cursor-pointer flex hover:underline text-white">
                   <img
-                    className="w-18 h-93"
-                    src="./kibrit.svg"
-                    alt="kibrit_logo"
+                    className="w-9 h-6"
+                    src="./pdf.png"
+                    alt="pdf logo"
                   />
+                  <span className="text-white pr-9 ">
+                  Presentation
+                  </span>
                 </a>
+
+                <div className="flex">
+                  <span className="text-white px-3 text-sm">by</span>
+                  <a target="_blank" href="http://kibrit.tech/">
+                    <img
+                      className="w-18 h-93"
+                      src="./kibrit.svg"
+                      alt="kibrit_logo"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </footer>
