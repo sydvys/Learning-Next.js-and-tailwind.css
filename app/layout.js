@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="back">
-          <nav className="w-full z-10">
-            <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+          <nav className="w-full z-10 px-7">
+            <div className="justify-between lg:max-w-7xl md:items-center md:flex md:px-8 sm:px-8">
               <div>
                 <div className="flex items-center justify-between py-4 md:py-8 md:block">
                   {/* LOGO */}
@@ -91,11 +91,11 @@ export default function RootLayout({ children }) {
                     navbar ? "p-12 md:p-0 block" : "hidden"
                   }`}
                 >
-                  <ul className="h-screen md:h-auto items-center justify-center md:flex py-6">
-                    <li className="pb-6 text-lg text-white py-2 md:px-2 text-center">
+                  <ul className="items-center justify-center md:flex py-6">
+                  <li className="pb-6 text-lg py-2 md:px-3 text-center">
                       <Link href="/Help" onClick={() => setNavbar(!navbar)}>
                         <img
-                          className="w-7 h-93"
+                          className="w-7 h-93 mx-auto"
                           src="./facebook.svg"
                           alt="facebook_logo"
                         />
@@ -284,7 +284,7 @@ export default function RootLayout({ children }) {
                     src="./playstore.svg"
                     alt="playstore_logo"
                   />
-                  <span className="text-white px-3">
+                  <span className="text-white px-3 hidden md:flex">
                     Play Market
                   </span>
                 </a>
@@ -295,7 +295,7 @@ export default function RootLayout({ children }) {
                   className="pl-8 cursor-pointer flex hover:underline text-white"
                 >
                   <img className="w-5 h-6" src="./apple.svg" alt="apple_logo" />
-                  <span className="text-white px-3">
+                  <span className="text-white px-3 hidden md:flex">
                     App Store
                   </span>
                 </a>
@@ -303,7 +303,7 @@ export default function RootLayout({ children }) {
 
               <div className="flex">
 
-                <a target="_blank" className="cursor-pointer flex hover:underline text-white">
+                <a target="_blank" className="cursor-pointer md:flex hover:underline text-white hidden">
                   <img
                     className="w-9 h-6"
                     src="./pdf.png"
