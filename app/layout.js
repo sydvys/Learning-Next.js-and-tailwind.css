@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body>
+      <body className="">
         <div className="back">
           <nav className="w-full z-10 px-7">
             <div className="justify-between lg:max-w-7xl md:items-center md:flex md:px-8 sm:px-8">
@@ -87,26 +87,18 @@ export default function RootLayout({ children }) {
 
               <div>
                 <div
-                  className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                    navbar ? "p-12 md:p-0 block" : "hidden"
+                  className={`flex-1 justify-self-center md:block " ${
+                    navbar ? "block" : "hidden"
                   }`}
                 >
-                  <ul className="items-center justify-center md:flex py-6">
-                  <li className="pb-6 text-lg py-2 md:px-3 text-center">
-                      <Link href="/Help" onClick={() => setNavbar(!navbar)}>
-                        <img
-                          className="w-7 h-93 mx-auto"
-                          src="./facebook.svg"
-                          alt="facebook_logo"
-                        />
-                      </Link>
-                    </li>
-                    <li className="pb-6 text-lg text-white py-2 md:px-3 text-center">
+                  <ul className="md:flex bg-slate-400">
+                 
+                    <li className="text-md text-white py-2 md:px-3 text-center">
                       <Link href="/Help" onClick={() => setNavbar(!navbar)}>
                         Help
                       </Link>
                     </li>
-                    <li className="pb-6 text-lg text-white py-2 px-3 text-center">
+                    <li className="text-md text-white py-2 px-3 text-center">
                       <Link
                         href="/Dictionaries"
                         onClick={() => setNavbar(!navbar)}
@@ -114,13 +106,13 @@ export default function RootLayout({ children }) {
                         Dictionaries
                       </Link>
                     </li>
-                    <li className="pb-6 text-xl text-white py-2 px-3 text-center">
+                    <li className="text-md text-white py-2 px-3 text-center">
                       <Menu
                         as="div"
                         className="relative inline-block text-left"
                       >
                         <div>
-                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-lg">
+                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md text-md">
                             Project
                             <ChevronDownIcon
                               className="h-4 text-[#ff5f53] mt-2"
@@ -191,24 +183,34 @@ export default function RootLayout({ children }) {
                       </Menu>
                     </li>
 
-                    <li className="pb-6 text-lg text-white py-2 px-3 text-center">
+                    <li className="text-md text-white py-2 px-3 text-center">
                       <Link href="/Mobile" onClick={() => setNavbar(!navbar)}>
                         Mobile App
                       </Link>
                     </li>
-                    <li className="pb-6 text-lg text-white py-2 px-3 text-center">
+                    <li className="text-md text-white py-2 px-3 text-center">
                       <Link href="/Contact" onClick={() => setNavbar(!navbar)}>
                         Contact us
                       </Link>
                     </li>
 
-                    <li className="pb-6 text-xl text-white py-2 pl-3 text-center">
+                    <li className="pb-3 text-lg py-2 md:px-3 text-center">
+                      <Link target="_blank" href="https://www.facebook.com/kibrittech/" onClick={() => setNavbar(!navbar)}>
+                        <img
+                          className="w-7 h-93 mx-auto"
+                          src="./facebook.svg"
+                          alt="facebook_logo"
+                        />
+                      </Link>
+                    </li>
+
+                    <li className="text-xl text-white py-2 pl-3 text-center">
                       <Menu
                         as="div"
                         className="relative inline-block text-left"
                       >
                         <div>
-                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-lg">
+                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-sm">
                             En
                             <ChevronDownIcon
                               className="h-4 text-[#ff5f53] mt-2"
@@ -271,7 +273,7 @@ export default function RootLayout({ children }) {
 
           <div className="">{children}</div>
 
-          <footer className="absolute bottom-0 py-5 md:py-10 px-4 md:px-6 w-full">
+          <footer className="absolute inset-x-0 bottom-0 py-5 md:py-10 px-4 md:px-6 w-full">
             <div className="flex justify-between">
               <div className="flex">
                 <a

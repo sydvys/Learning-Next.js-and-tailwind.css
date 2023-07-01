@@ -4,16 +4,21 @@
 
 body {
 position: relative;
+height: 100vh;
+background: rgb(60, 78, 136);
+background: linear-gradient(
+  180deg,
+  rgba(60, 78, 136, 1) 0%,
+  rgba(51, 69, 122, 1) 100%
+);
 }
 
-.back {
+/* .back {
   background: rgb(60, 78, 136);
   background: linear-gradient(
     180deg,
     rgba(60, 78, 136, 1) 0%,
     rgba(51, 69, 122, 1) 100%
   );
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
-}
+  z-index: 1; 
+} */
