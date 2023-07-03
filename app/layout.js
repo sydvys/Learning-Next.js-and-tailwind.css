@@ -48,15 +48,15 @@ export default function RootLayout({ children }) {
                     >
                       {navbar ? (
                         <svg
-                          class="h-8 w-8 text-white"
+                          className="h-8 w-8 text-white"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
-                          stroke-width="2"
+                          strokeWidth="2"
                           stroke="currentColor"
                           fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         >
                           {" "}
                           <path stroke="none" d="M0 0h24v24H0z" />{" "}
@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
                         </svg>
                       ) : (
                         <svg
-                          class="w-5 h-4 text-gray-800 dark:text-white"
+                          className="w-5 h-4 text-gray-800 dark:text-white"
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -73,9 +73,9 @@ export default function RootLayout({ children }) {
                         >
                           <path
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M1 1h15M1 7h15M1 13h15"
                           />
                         </svg>
@@ -273,7 +273,7 @@ export default function RootLayout({ children }) {
 
           <div className="">{children}</div>
 
-          <footer className="absolute inset-x-0 bottom-0 py-5 md:py-10 px-4 md:px-6 w-full">
+          <footer className="relative inset-x-0 bottom-0 py-5 md:py-10 px-4 md:px-6 w-full">
             <div className="flex justify-between">
               <div className="flex">
                 <a
