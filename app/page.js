@@ -34,7 +34,7 @@ export default function Home() {
 
         <div className="">
           <button className="bg-[#ff5f53] text-white py-1 px-4 rounded-l-[3px]">Word-list</button>
-          <button className="bg-[#475a95] text-white py-1 px-5 rounded-r-[3px]">Entries</button>
+          <button className="bg-[#475a95] text-white py-1 px-6 rounded-r-[3px]">Entries</button>
         </div>
       </div>
     </main>
