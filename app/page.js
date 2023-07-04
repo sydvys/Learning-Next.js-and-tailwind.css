@@ -2,36 +2,40 @@ import Help from "./Help/page";
 
 export default function Home() {
   return (
-    <main className="">
-      <div className="bg-gray-100 h-32 flex justify-center items-center mx-auto w-2/5 xl:w-1/2 rounded-md">
-        <form>
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+    <main className="h-full ">
+      <div className="bg-gray-100 h-28 flex flex-col justify-center items-center mx-auto w-2/5 xl:w-1/2 rounded-[3px] ">
+        <div className=" p-3 flex items-start relative top-[-10px] w-[100%] ">
+          <div className="relative flex items-start h-9 rounded-[3px] bg-white overflow-hidden w-[100%] border-[1px] border-gray-300">
+            <div className="grid place-items-start h-full w-12 text-gray-300">
               <svg
-                aria-hidden="true"
-                className="w-5 h-5 text-gray-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
+                />
               </svg>
             </div>
+
             <input
-              type="search"
-              id="default-search"
-              className="block p-4 pl-10 text-sm outline-none"
+              className="peer h-full w-full outline-none text-sm text-gray-700 pr-2  "
+              type="text"
+              id="search"
               placeholder="Search"
-              required
             />
           </div>
-        </form>
+        </div>
+
+        <div className="">
+          <button className="bg-[#ff5f53] text-white py-1 px-4 rounded-l-[3px]">Word-list</button>
+          <button className="bg-[#475a95] text-white py-1 px-5 rounded-r-[3px]">Entries</button>
+        </div>
       </div>
     </main>
   );
