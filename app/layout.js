@@ -91,14 +91,14 @@ export default function RootLayout({ children }) {
                     navbar ? "block" : "hidden"
                   }`}
                 >
-                  <ul className="md:flex bg-slate-400">
+                  <ul className="md:flex">
                  
-                    <li className="text-md text-white py-2 md:px-3 text-center">
+                    <li className="text-md text-white py-2 px-3">
                       <Link href="/Help" onClick={() => setNavbar(!navbar)}>
                         Help
                       </Link>
                     </li>
-                    <li className="text-md text-white py-2 px-3 text-center">
+                    <li className="text-md text-white py-2 px-3">
                       <Link
                         href="/Dictionaries"
                         onClick={() => setNavbar(!navbar)}
@@ -106,13 +106,13 @@ export default function RootLayout({ children }) {
                         Dictionaries
                       </Link>
                     </li>
-                    <li className="text-md text-white py-2 px-3 text-center">
+                    <li className="text-md text-white py-2 px-3">
                       <Menu
                         as="div"
                         className="relative inline-block text-left"
                       >
                         <div>
-                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md text-md">
+                          <Menu.Button className="inline-flex w-full gap-x-1.5 rounded-md text-md">
                             Project
                             <ChevronDownIcon
                               className="h-4 text-[#ff5f53] mt-2"
@@ -183,18 +183,20 @@ export default function RootLayout({ children }) {
                       </Menu>
                     </li>
 
-                    <li className="text-md text-white py-2 px-3 text-center">
+                    <li className="text-md text-white py-2 px-3">
                       <Link href="/Mobile" onClick={() => setNavbar(!navbar)}>
                         Mobile App
                       </Link>
                     </li>
-                    <li className="text-md text-white py-2 px-3 text-center">
+                    <li className="text-md text-white py-2 px-3">
                       <Link href="/Contact" onClick={() => setNavbar(!navbar)}>
                         Contact us
                       </Link>
                     </li>
 
-                    <li className="pb-3 text-lg py-2 md:px-3 text-center">
+                    <div className="flex flex-row justify-between">
+
+                    <li className="pb-3 text-lg py-2 px-3 justify-start">
                       <Link target="_blank" href="https://www.facebook.com/kibrittech/" onClick={() => setNavbar(!navbar)}>
                         <img
                           className="w-7 h-93 mx-auto"
@@ -204,13 +206,13 @@ export default function RootLayout({ children }) {
                       </Link>
                     </li>
 
-                    <li className="text-xl text-white py-2 pl-3 text-center">
+                    <li className="text-xl text-white pl-3">
                       <Menu
                         as="div"
                         className="relative inline-block text-left"
                       >
                         <div>
-                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-sm">
+                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-[18px]">
                             En
                             <ChevronDownIcon
                               className="h-4 text-[#ff5f53] mt-2"
@@ -265,6 +267,9 @@ export default function RootLayout({ children }) {
                         </Transition>
                       </Menu>
                     </li>
+
+                    </div>
+
                   </ul>
                 </div>
               </div>
