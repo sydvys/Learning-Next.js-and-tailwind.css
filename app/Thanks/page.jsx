@@ -2,11 +2,11 @@ import React from "react";
 
 const Thanks = () => {
   return (
-    <div className="mx-auto w-[90%]">
-      <h1 className="text-[#ff5f53] font-light text-2xl">Thanks</h1>
+    <div className="mx-auto w-4/5 py-4">
+      <h1 className="text-[#ff5f53] font-light text-2xl md:text-5xl md:py-4">Thanks</h1>
 
       <div className="text-white text-sm">
-        <p className="py-5">
+        <p className="py-4">
           First, we would like to express our special appreciation to all
           authors, editors, and other compilers of the dictionaries, which were
           used in the application, for their immense and painstaking work.
@@ -17,7 +17,7 @@ const Thanks = () => {
             Furthermore, we heartily thank everyone who directly participated in
             the project:
           </p>
-          <ul className="list-disc ml-6">
+          <ul className="list-disc ml-6 px-4">
             <li>
               The vice-president of Azerbaijan National Academy of Sciences,
               doctor of philological sciences, professor{" "}

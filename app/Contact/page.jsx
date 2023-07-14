@@ -20,23 +20,22 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center mx-auto w-[88%] ">
+    <div className="flex flex-col justify-center items-center mx-auto w-4/5 py-4">
+
       <form className="container grid gap-5" onSubmit={handleSubmit}>
-        <h1 className="text-[#ff5f53] text-2xl font-extralight">Contact us</h1>
-        <p className="text-white text-sm py-3">
+        <h1 className="text-[#ff5f53] text-2xl md:text-5xl font-light md:py-4">Contact us</h1>
+        <p className="text-white text-sm">
           You can send us your wishes and proposals, or contact us for another
           issue related to the “Bildilçin” project by using the form below.
         </p>
 
-        <div className="pt-4 name">
+        <div className="pt-3 name">
           <div>
             <input
-              className="w-full p-3.5 rounded-md bg-[#2e3e70] placeholder:text-gray-500"
+              className="w-full p-3.5 rounded-md bg-[#2e3e70] placeholder:text-gray-500 focus:border-[#2a56a1] focus:outline-none focus:ring-0 focus:border-4 "
               id="name"
               type="text"
               name="name"
-              autoComplete="given-name"
-              required
               value={name}
               placeholder="Your name and surname *"
               onChange={(e) => setName(e.target.value)}
@@ -44,16 +43,14 @@ const Contact = () => {
           </div>
         </div>
 
-
         <div className="grid md:grid-cols-2 gap-5">
           <div className=" email md:grid-col-2 ">
             <input
-              className="w-full p-3.5 rounded-md bg-[#2e3e70] placeholder:text-gray-500"
+              className="w-full p-3.5 rounded-md bg-[#2e3e70] placeholder:text-gray-500 focus:border-[#2a56a1] focus:outline-none focus:ring-0 focus:border-4 "
               id="email"
               type="email"
               name="email"
               autoComplete="email"
-              required
               value={email}
               placeholder="Your e-mail address *"
               onChange={(e) => setEmail(e.target.value)}
@@ -62,7 +59,7 @@ const Contact = () => {
 
           <div className=" email md:grid-col-2 ">
             <input
-              className="w-full p-3.5 rounded-md bg-[#2e3e70] placeholder:text-gray-500"
+              className="w-full p-3.5 rounded-md bg-[#2e3e70] placeholder:text-gray-500 focus:border-[#2a56a1] focus:outline-none focus:ring-0 focus:border-4 "
               id="extra"
               type="text"
               name="extra"
@@ -73,10 +70,9 @@ const Contact = () => {
           </div>
         </div>
 
-
         <div className=" message">
           <input
-            className="w-full h-44 rounded-md bg-[#2e3e70] placeholder:absolute placeholder:top-0 placeholder:p-3 placeholder:text-gray-500"
+            className="w-full h-44 rounded-md bg-[#2e3e70] placeholder:absolute placeholder:top-0 placeholder:p-3 placeholder:text-gray-500 focus:border-[#2a56a1] focus:outline-none focus:ring-0 focus:border-4"
             id="message"
             name="message"
             value={message}

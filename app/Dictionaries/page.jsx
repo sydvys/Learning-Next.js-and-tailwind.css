@@ -17,8 +17,8 @@ const Dictionaries = () => {
   };
 
   return (
-    <div className="mx-auto w-[88%]">
-      <h1 className="text-[#ff5f53] font-light text-2xl">Dictionaries</h1>
+    <div className="mx-auto w-4/5 pt-4">
+      <h1 className="text-[#ff5f53] font-light text-2xl md:text-5xl md:py-4">Dictionaries</h1>
 
       <div>
       <div onClick={openPopup}>

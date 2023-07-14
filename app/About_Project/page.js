@@ -2,8 +2,8 @@ import React from "react";
 
 const About_Project = () => {
   return (
-    <div className="mx-auto w-[88%]">
-      <h1 className="text-[#ff5f53] font-light text-2xl">About application</h1>
+    <div className="mx-auto w-4/5 pt-4">
+      <h1 className="text-[#ff5f53] font-light text-2xl md:text-5xl md:py-4">About application</h1>
       
       <div className=" text-white text-sm ">
         <p className="py-5">
