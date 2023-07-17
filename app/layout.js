@@ -22,6 +22,7 @@ function classNames(...classes) {
 export default function RootLayout({ children }) {
   const [navbar, setNavbar] = useState(false);
   const [isProjectOpen, setProjectOpen] = useState(false);
+  
 
   return (
     <html lang="en">
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
                       className=" text-gray-700 rounded-md outline-none focus:border-gray-400"
                       onClick={() => setNavbar(!navbar)}
                     >
+                      {/* here */}
                       {navbar ? (
                         <svg
                           className="h-8 w-8 text-white"
@@ -86,11 +88,11 @@ export default function RootLayout({ children }) {
 
               <div>
                 <div
-                  className={`flex-1 justify-self-center md:block " ${
+                  className={`flex-1 justify-self-center md:block relative" ${
                     navbar ? "block" : "hidden"
                   }`}
                 >
-                  <ul className="md:flex">
+                  <ul className="md:flex bg-red-500 absolute inset-x-0 top-0 md:relative z-30">
 
                   <li className="pb-3 text-lg py-2 px-3 justify-start hidden md:inline ">
                         <Link
