@@ -67,16 +67,16 @@ export default function Home() {
                 id="dropdown"
                 className={`absolute z-50 ${
                   dropdownVisible ? "block" : "hidden"
-                } bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
+                } bg-[#475a95] divide-y divide-gray-100 rounded-lg shadow w-fit border-gray-500 border-2 `}
               >
                 <ul
-                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  className="py-2 text-sm text-white"
                   aria-labelledby="dropdownDefaultButton"
                 >
                   <li>
                     <a
                       href=""
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-2 py-0.5 hover:bg-[#488bff]"
                     >
                       PY
                     </a>
@@ -84,9 +84,17 @@ export default function Home() {
                   <li>
                     <a
                       href=""
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-2 py-0.5 hover:bg-[#488bff]"
                     >
                       AZ
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      className="block px-2 py-0.5 hover:bg-[#488bff]"
+                    >
+                      EN
                     </a>
                   </li>
                 </ul>
